@@ -6,12 +6,8 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    try {
                         // Your test command
-                        sh './hello.sh'
-                    } catch (Exception e) {
-                        echo "Tests failed, but the build will not be marked as failed."
-                    }
+                        sh './hello.sh' 
                 }
             }
         }
